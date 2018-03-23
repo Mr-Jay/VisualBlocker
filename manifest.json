@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "blockme",
+	"version": "1.0",
+	"permissions" : [ "contextMenus", "tabs" ], 
+	"icons" : { "16" : "icone.png" } ,
+	"background": {
+		"page": "background.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["myscript.js"]
+		}
+	],
+	"browser_action": {
+		"default_icon" : "icone.png"
+	}
+
+}
